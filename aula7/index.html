@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+
+<body>
+    <form action="#">
+        <h1>FORMULARIO ABSURDO</h1>
+        <!-- INPUT NOME -->
+        <div class="formAssunto">
+            <label for="nome">Nome : </label>
+            <input id="nome" required type="text" placeholder="Exemplo : João">
+        </div>
+        <!-- INPUT EMAIL -->
+        <div class="formAssunto">
+            <label for="email">Email : </label>
+            <input id="email" type="email" placeholder="Exemplo : fulano@email">
+        </div>
+        <!-- INPUT COR -->
+        <div class="formAssunto">
+            <label for="cor">Cor : </label>
+            <input id="cor" type="color">
+        </div>
+        <!-- INPUT IDADE -->
+        <div class="formAssunto">
+            <label for="idade">Idade : </label>
+            <input id="idade" type="number" min="0" max="200" step="1">
+        </div>
+        <!-- SELECT ESTADO -->
+        <div class="formAssunto">
+            <select name="estado" id="estado">
+                <option value=""> - </option>
+                <option value="SP">São Paulo</option>
+                <option value="DF">Distrito Federal</option>
+            </select>
+        </div>
+        <!-- FEEDBACK -->
+        <div class="formAssunto">
+            <textarea style="resize:none ;" name="feedback" id="feedback" cols="30" rows="10">
+        </textarea>
+        </div>
+        <!-- ENVIAR -->
+        <!-- <input type="button" value="ENVIAR"> -->
+        <button type="submit">ENVIAR</button>
+        <button type="reset">RESETAR</button>
+        <button type="button" id="bemvindo">NOME</button>
+    </form>
+</body>
+<script>
+    document.getElementById("bemvindo").addEventListener("click", () => {
+        nome = document.getElementById("nome").value
+        alert("Seja bem vindo(a) "+nome)
+    })
+</script>
+</html>
